@@ -8,13 +8,25 @@ Board::Board() {
     }
 
     for (int i = 0; i < 3; ++i) {
-        int snakePos = rand() % 30;
-        squares[snakePos] = 'S';
+        // Get a position where there is no snake or ladder
+        do {
+            int snakePos = rand() % 30;
+            if (squares[snakePos] == 'N') {
+                squares[snakePos] = 'S';
+                break;
+            }
+        } while (true);
     }
 
     for (int i = 0; i < 3; ++i) {
-        int ladderPos = rand() % 30;
-        squares[ladderPos] = 'L';
+        // Get a position where there is no snake or ladder
+        do {
+            int ladderPos = rand() % 30;
+            if (squares[ladderPos] == 'N') {
+                squares[ladderPos] = 'L';
+                break;
+            }
+        } while (true);
     }
 }
 

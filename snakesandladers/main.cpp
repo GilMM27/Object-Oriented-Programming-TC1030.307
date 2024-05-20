@@ -1,5 +1,4 @@
-#include <iostream>
-#include "mygame.h"
+#include "mygame.cpp"
 
 int main() {
     MyGame game;
