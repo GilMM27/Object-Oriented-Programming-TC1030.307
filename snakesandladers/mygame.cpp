@@ -13,6 +13,7 @@ void MyGame::start() {
     std::cout << "Press C to continue next turn, or E to end the game: ";
     do {
         std::cin >> choice;
+        std::cout << std::endl; // Simulate pressing enter.
         if (choice != 'C' && choice != 'E') {
             std::cout << "Invalid option, please press C to continue next turn or E to end te game: ";
         }
@@ -36,6 +37,7 @@ void MyGame::start() {
         std::cout << "Press C to continue next turn, or E to end the game: ";
         do {
             std::cin >> choice;
+            std::cout << std::endl; // Simulate pressing enter.
             if (choice != 'C' && choice != 'E') {
                 std::cout << "Invalid option, please press C to continue next turn or E to end te game: ";
             }
@@ -55,8 +57,8 @@ void MyGame::playTurn() {
     char squareType = board.getSquareType(currentPosition + diceResult - 1);
     int newPosition;
 
-    std::cout << "Index\tPlayer\tPosition\tDiceResult\tSquareType\tNewPosition" << std::endl;
-    std::cout << currentPlayerIndex << "\t" << currentPlayer << "\t" << currentPosition + 1 << "\t\t" << diceResult << "\t\t" << squareType << "\t\t";
+    std::cout << "Turn\tPlayer\tPosition\tDiceResult\tSquareType\tNewPosition" << std::endl;
+    std::cout << turn << "\t" << currentPlayer << "\t" << currentPosition + 1 << "\t\t" << diceResult << "\t\t" << squareType << "\t\t";
 
     newPosition = currentPosition + diceResult;
     if (squareType == 'S') {
