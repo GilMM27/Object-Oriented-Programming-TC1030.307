@@ -46,14 +46,11 @@ protected:
     int currentPlayerIndex;
     Dice dice;
     std::vector<Player> players;
-    // GameType* gameType;
     std::vector<Square*> board;
 public:
     MyGame(int tiles, int snakes, int ladders, int penalty, int reward, int playersNum, int turns);
     ~MyGame();
     void initializeBoard();
-    void playGame();
-    void playTurn();
     virtual void play();
 };
 

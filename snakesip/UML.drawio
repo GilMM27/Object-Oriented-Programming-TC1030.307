@@ -1,0 +1,46 @@
+<mxfile host="65bd71144e">
+    <diagram id="emuQsiq0zGyP2BrojjAT" name="Page-1">
+        <mxGraphModel dx="751" dy="682" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="18" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="mygame" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                    <mxGeometry x="138" y="70" width="575" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="- int: tiles&#10;- int: snakes&#10;- int: ladders&#10;- int: penalty&#10;- int: reward&#10;- int: playersNum&#10;- int: turns&#10;- int: currentPlayerIndex&#10;- Dice: dice&#10;- vector&lt;Player&gt;: players&#10;- vector&lt;Square*&gt;: board" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="4">
+                    <mxGeometry y="30" width="575" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="4">
+                    <mxGeometry y="200" width="575" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="+ MyGame(int: tiles, int: snakes, int: ladders, int: penalty, int: reward, int: playersNum, int: turns)&#10;+ ~MyGame()&#10;+ initializeBoard(): void&#10;+ play(): virtual void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="4">
+                    <mxGeometry y="208" width="575" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="ManualGame" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="400" width="320" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="8">
+                    <mxGeometry y="30" width="320" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="+ ManualGame(int: tiles, int: snakes, int: ladders, int:&#10;penalty, int: reward, int: playersNum, int: turns) : MyGame&#10;(int: tiles, int: snakes, int: ladders, int: penalty, int: reward,&#10;int: playersNum, int: turns)&#10;+ override play(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="8">
+                    <mxGeometry y="38" width="320" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="AutomaticGame" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="400" width="320" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="12">
+                    <mxGeometry y="30" width="320" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="+ AutomaticGame(int: tiles, int: snakes, int: ladders, int:&#10;penalty, int: reward, int: playersNum, int: turns) : MyGame&#10;(int: tiles, int: snakes, int: ladders, int: penalty, int: reward,&#10;int: playersNum, int: turns)&#10;+ override play(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="12">
+                    <mxGeometry y="38" width="320" height="82" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

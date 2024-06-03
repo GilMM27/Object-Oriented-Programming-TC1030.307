@@ -57,11 +57,6 @@ void ManualGame::play() {
     }
 }
 
-// ManualGame::ManualGame() {
-    // Constructor implementation
-    // Initialize any member variables or perform any setup here
-// }
-
 void AutomaticGame::play() {
     std::cout << "Playing automatic game..." << std::endl;
     // Implementation for automatic game play
