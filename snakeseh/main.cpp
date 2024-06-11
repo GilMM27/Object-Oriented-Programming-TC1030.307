@@ -18,9 +18,23 @@ int main(int argc, char* argv[]) {
         int players = std::stoi(argv[6]);
         int turns = std::stoi(argv[7]);
         char gameType = argv[8][0];
-
-        if (tiles <= 0 || snakes < 0 || ladders < 0 || penalty < 0 || reward < 0 || players <= 0 || turns <= 0) {
-            throw InvalidConfigurationException("parameter", -1);
+        
+        if (tiles <= 0) {
+            throw InvalidConfigurationException("tiles", tiles);
+        } else if (snakes < 0) {
+            throw InvalidConfigurationException("snakes", snakes);
+        } else if (ladders < 0) {
+            throw InvalidConfigurationException("ladders", ladders);
+        } else if (penalty <= 0) {
+            throw InvalidConfigurationException("penalty", penalty);
+        } else if (reward <= 0) {
+            throw InvalidConfigurationException("reward", reward);
+        } else if (players <= 0) {
+            throw InvalidConfigurationException("players", players);
+        } else if (turns <= 0) {
+            throw InvalidConfigurationException("turns", turns);
+        } else if (gameType != 'A' && gameType != 'M') {
+            throw InvalidConfigurationException("gameType", gameType);
         }
 
         if (gameType == 'A') {
@@ -29,8 +43,6 @@ int main(int argc, char* argv[]) {
         } else if (gameType == 'M') {
             ManualGame game(tiles, snakes, ladders, penalty, reward, players, turns);
             game.play();
-        } else {
-            throw InvalidConfigurationException("gameType", gameType);
         }
 
     } catch (const InvalidConfigurationException& e) {

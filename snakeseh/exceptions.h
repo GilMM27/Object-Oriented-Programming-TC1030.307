@@ -7,7 +7,7 @@
 class InvalidConfigurationException : public std::runtime_error {
 public:
     InvalidConfigurationException(const std::string& param_name, int param_value)
-        : std::runtime_error("Invalid " + param_name + " value " + std::to_string(param_value)) {}
+        : std::runtime_error("The argument " + param_name + " = " + std::to_string(param_value) + " is invalid ") {}
 };
 
 class InvalidOptionException : public std::runtime_error {
