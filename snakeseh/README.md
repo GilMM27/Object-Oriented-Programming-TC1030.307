@@ -39,5 +39,9 @@ Operator overloading
 - Squares: the '+' operator is overloaded to return the sum of the position of a square plus a reward or penalty depending on the type of that square.
 - Turn: overloaded '<<' to automatically print all the information of the turn.
 
+Exceptions:
+- main: when an input parameter is invalid, the code raises an exception and terminates the execution.
+- gameType: in manual mode, when an incorrect input is detected an error is printed to the console, and after 5 consecutive errors the game is terminated.
+
 ### Design Decisions
 The code was divided in the classes previously mentioned for the organization of it. The snakes and ladders are places randomly every start of the game, so each game is unique. The program uses standard input and output for interaction. 
