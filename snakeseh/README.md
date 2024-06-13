@@ -1,4 +1,5 @@
 # Snakes and Ladders
+By: Maria Ramos and Gilberto Malagamba
 
 ### Overview
 Simplified version of the game, consisting a square board, a dice and a number of players. The players will take turns to roll the dice and move across the board, taking account of the snakes (go back) and ladders (advance forward).
